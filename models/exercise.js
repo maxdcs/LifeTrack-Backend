@@ -13,7 +13,11 @@ mongoose.connect(url)
   })
 
 const exerciseSchema = new mongoose.Schema({
-  name: String,
+  name: {
+    type: String,
+    minlength: 5,
+    required: true
+  },
   muscleGroup: String,
   typeOfReps: String
 })
