@@ -1,25 +1,18 @@
 const mongoose = require('mongoose')
 
-const url = process.env.MONGODB_URI
-
-mongoose.set('strictQuery', false)
-
-mongoose.connect(url)
-  .then(result => {
-    console.log('connected to MongoDB')
-  })
-  .catch((error) => {
-    console.log('error connecting to MongoDB:', error.message)
-  })
-
 const exerciseSchema = new mongoose.Schema({
   name: {
     type: String,
     minlength: 5,
     required: true
   },
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+  },
   muscleGroup: String,
-  typeOfReps: String
+  typeOfReps: String,
+  likes: Number
 })
 
 exerciseSchema.set('toJSON', {
