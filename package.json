@@ -7,7 +7,7 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "build:ui": "rm -rf dist && cd ../frontend && npm run build && cp -r dist ../backend",
-    "deploy:full": "npm run build:ui && git add . && git commit -m \"UI built with backends deploy:full script\" && git push",
+    "deploy:full": "npm run build:ui && git add . && git commit -m \"make remove function work in backend and update frontend state correctly\" && git push",
     "test": "jest --verbose"
   },
   "author": "",
