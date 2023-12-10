@@ -7,7 +7,7 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "build:ui": "rm -rf dist && cd ../frontend && npm run build && cp -r dist ../backend",
-    "deploy:full": "npm run build:ui && git add . && git commit -m \"Move loginFormData state from App to LoginForm component\" && git push",
+    "deploy:full": "npm run build:ui && git add . && git commit -m \"Move newExerciseFormData and the change handler to its component\" && git push",
     "test": "jest --verbose"
   },
   "author": "",
